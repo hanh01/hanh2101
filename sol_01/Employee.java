@@ -9,89 +9,54 @@ package sol_01;
  *
  * @author Admin
  */
-public class Time {
-    private int hour;
-    private int minute;
-    private int second;
+public class Employee {
+    private int id;
+    private String firstName;
+    private String lastName;
+    private int salary;
     
-    public Time(){
-        hour = 13;
-        minute = 10;
-        second = 20;
+    public Employee(){
+        id = 3;
+        firstName = "Nguyen";
+        lastName = "A";
+        salary = 3000000;
     }
-    public Time(int hour, int minute, int second){
-        this.hour = hour;
-        this.minute = minute;
-        this.second = second;
+    public Employee(int id, String firstName, String lastName, int salary){
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.salary = salary;
     }
-    
-    public int getHour(){
-        return this.hour;
+    public int getID1(){
+        return this.id;
     }
-    public void setHour(int hour){
-        if(hour >= 0 && hour<= 23){
-            this.hour = hour;
-        }
-        else{
-            System.out.println("du lieu khong phu hop");
-        }
+    public String getFirstName(){
+        return this.firstName;
     }
-    
-    public int getMinute(){
-        return this.minute;
+    public String getLastName(){
+        return this.lastName;
     }
-    public void setMinute(int minute){
-        if(minute >= 0 && minute<= 59){
-            this.minute = minute;
-        }
-        else{
-            System.out.println("du lieu khong phu hop");
-        }
+    public String getName(){
+      return this.firstName + this.lastName ;
     }
-    
-    public int getSecond(){
-        return this.second;
+    public int getSalary(){
+        return this.salary;
     }
-    public void setSecond(int second){
-        if(second >= 0 && second<= 59){
-            this.second = second;
-        }
-        else{
-            System.out.println("du lieu khong phu hop");
-        }
+    public void setSalary(int salary){
+        this.salary = salary ;
     }
-    
-    public void setTime(int hour, int minute, int second){
-        if(hour >= 0 && hour<= 23){
-            this.hour = hour;
-        }
-        else{
-            System.out.println("du lieu khong phu hop");
-        }
-        if(minute >= 0 && minute<= 59){
-            this.minute = minute;
-        }
-        else{
-            System.out.println("du lieu khong phu hop");
-        }
-         if(second >= 0 && second<= 59){
-            this.second = second;
-        }
-        else{
-            System.out.println("du lieu khong phu hop");
-        }
+    public int getAnnualSalaly(){
+        return salary * 12;
+    }
+    public int raiseSalary(int percent){
+        return salary * percent/100 +salary;
     }
 
     @Override
     public String toString() {
-        return "Time{" + hour + ":" + minute + ":" + second + '}';
+        return "Employee{" + "id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", salary=" + salary + '}';
     }
     
-    public int nextSecond(){
-        return this.second = second +1;
-    }
-    public int previousSecond(){
-        return this.second = second -1;
-    }
+    
     
 }

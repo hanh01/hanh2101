@@ -9,89 +9,33 @@ package sol_01;
  *
  * @author Admin
  */
-public class Time {
-    private int hour;
-    private int minute;
-    private int second;
+public class Circle2 {
+    private double radius;
     
-    public Time(){
-        hour = 13;
-        minute = 10;
-        second = 20;
+    public Circle2(){
+        radius = 1.0;
     }
-    public Time(int hour, int minute, int second){
-        this.hour = hour;
-        this.minute = minute;
-        this.second = second;
+    public Circle2(double radius){
+        this.radius = radius;
     }
     
-    public int getHour(){
-        return this.hour;
+    public double getRadius1(){
+        return radius;
     }
-    public void setHour(int hour){
-        if(hour >= 0 && hour<= 23){
-            this.hour = hour;
-        }
-        else{
-            System.out.println("du lieu khong phu hop");
-        }
+    public void setRadius(double radius){
+        this.radius = radius;
     }
-    
-    public int getMinute(){
-        return this.minute;
+    public double getArea(){
+        return radius * radius * Math.PI;
     }
-    public void setMinute(int minute){
-        if(minute >= 0 && minute<= 59){
-            this.minute = minute;
-        }
-        else{
-            System.out.println("du lieu khong phu hop");
-        }
-    }
-    
-    public int getSecond(){
-        return this.second;
-    }
-    public void setSecond(int second){
-        if(second >= 0 && second<= 59){
-            this.second = second;
-        }
-        else{
-            System.out.println("du lieu khong phu hop");
-        }
-    }
-    
-    public void setTime(int hour, int minute, int second){
-        if(hour >= 0 && hour<= 23){
-            this.hour = hour;
-        }
-        else{
-            System.out.println("du lieu khong phu hop");
-        }
-        if(minute >= 0 && minute<= 59){
-            this.minute = minute;
-        }
-        else{
-            System.out.println("du lieu khong phu hop");
-        }
-         if(second >= 0 && second<= 59){
-            this.second = second;
-        }
-        else{
-            System.out.println("du lieu khong phu hop");
-        }
+    public double getCircumference(){
+        return radius * 2 * Math.PI;
     }
 
     @Override
     public String toString() {
-        return "Time{" + hour + ":" + minute + ":" + second + '}';
+        return "Circle2{" + "radius=" + radius + '}';
     }
     
-    public int nextSecond(){
-        return this.second = second +1;
-    }
-    public int previousSecond(){
-        return this.second = second -1;
-    }
     
 }

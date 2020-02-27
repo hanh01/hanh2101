@@ -25,7 +25,7 @@ public class Time {
         this.second = second;
     }
     
-    public int getHour(){
+    public int getHour1(){
         return this.hour;
     }
     public void setHour(int hour){

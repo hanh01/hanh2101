@@ -27,7 +27,7 @@ public class InvoiceItem {
         this.qty = qty;
         this.unitPrice = unitPrice;
     }
-    public String getID(){
+    public String getID1(){
         return this.id;
     }
     public String getDesc(){

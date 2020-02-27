@@ -42,7 +42,7 @@ public class Account {
     }
     public int debit(int amount){
         if (amount <= balance ){
-            return balance = amount - balance  ;
+            return balance =  amount - balance;
         }
         else{
            System.out.println("Amount exceeded balance");}

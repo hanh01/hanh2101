@@ -9,41 +9,19 @@ package sol_01;
  *
  * @author Admin
  */
-public class Rectangle {
-    private float length;
-    private float width;
-    
-    public Rectangle(){
-        length = 2.0f;
-        width = 1.0f;
+public class testCircle2 {
+    public static void main (String [] args){
+        Circle2 c1 = new Circle2();
+        System.out.println(c1.toString());
+        System.out.println("radius : " + c1.getRadius1());
+        System.out.println(c1.getArea());
+        System.out.println(c1.getCircumference());
+        
+        System.out.println("----------------------");
+        c1.setRadius(2.1);
+        System.out.println("radius 2 : " + c1.getRadius1());
+        System.out.println(c1.getArea());
+        System.out.println(c1.getCircumference());
+        
     }
-    public Rectangle(float length, float width){
-        this.length = length;
-        this.width = width;
-    }
-    public float getLength(){
-        return length;
-    }
-    public void setLength(float length){
-        this.length = length;
-    }
-    public float getWidth(){
-        return width;
-    }
-    public void setWidth(float width){
-        this.width = width;
-    }
-    public double getArea(){
-        return length * width ;
-    }
-    public double getPerimeter(){
-        return (length + width) * 2 ;
-    }
-
-    @Override
-    public String toString() {
-        return "Rectangle{" + "length=" + length + ", width=" + width + '}';
-    }
-    
-    
 }

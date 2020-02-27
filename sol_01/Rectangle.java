@@ -21,7 +21,7 @@ public class Rectangle {
         this.length = length;
         this.width = width;
     }
-    public float getLength(){
+    public float getLength1(){
         return length;
     }
     public void setLength(float length){

@@ -9,89 +9,85 @@ package sol_01;
  *
  * @author Admin
  */
-public class Time {
-    private int hour;
-    private int minute;
-    private int second;
+public class Date {
+    private int day;
+    private int month;
+    private int year;
     
-    public Time(){
-        hour = 13;
-        minute = 10;
-        second = 20;
+    public Date(){
+        day = 21;
+        month = 01;
+        year = 2001;
     }
-    public Time(int hour, int minute, int second){
-        this.hour = hour;
-        this.minute = minute;
-        this.second = second;
-    }
-    
-    public int getHour(){
-        return this.hour;
-    }
-    public void setHour(int hour){
-        if(hour >= 0 && hour<= 23){
-            this.hour = hour;
-        }
-        else{
-            System.out.println("du lieu khong phu hop");
-        }
+    public Date(int day,int month,int year){
+        this.day = day;
+        this.month = month;
+        this.year = year;
     }
     
-    public int getMinute(){
-        return this.minute;
+    public int getDay1(){
+        return this.day;
     }
-    public void setMinute(int minute){
-        if(minute >= 0 && minute<= 59){
-            this.minute = minute;
+    public void setDay(int day){
+        if(day >= 1 && day<= 31){
+            this.day = day;
         }
         else{
             System.out.println("du lieu khong phu hop");
         }
     }
     
-    public int getSecond(){
-        return this.second;
+    public int getMonth(){
+        return this.month;
     }
-    public void setSecond(int second){
-        if(second >= 0 && second<= 59){
-            this.second = second;
+    public void setMonth(int month){
+        if(month >= 1 && month<= 12){
+            this.month = month;
         }
         else{
             System.out.println("du lieu khong phu hop");
         }
     }
     
-    public void setTime(int hour, int minute, int second){
-        if(hour >= 0 && hour<= 23){
-            this.hour = hour;
+    public int getYear(){
+        return this.year;
+    }
+    public void setYear(int year){
+        if(year >= 1900 && year<= 9999){
+        this.year = year;    
+        }
+        else{
+            System.out.println("du lieu khong phu hop");
+        }  
+    }
+    
+    
+    public void setDate(int day, int month, int year){
+        if(day >= 1 && day<= 31){
+            this.day = day;
         }
         else{
             System.out.println("du lieu khong phu hop");
         }
-        if(minute >= 0 && minute<= 59){
-            this.minute = minute;
+        if(month >= 1 && month<= 12){
+            this.month = month;
         }
         else{
             System.out.println("du lieu khong phu hop");
         }
-         if(second >= 0 && second<= 59){
-            this.second = second;
+         if(year >= 1900 && year<= 9999){
+        this.year = year;    
         }
         else{
             System.out.println("du lieu khong phu hop");
-        }
+        }  
+ 
     }
 
     @Override
     public String toString() {
-        return "Time{" + hour + ":" + minute + ":" + second + '}';
+        return "Date{"  + day + "/" + month + "/" + year + '}';
     }
     
-    public int nextSecond(){
-        return this.second = second +1;
-    }
-    public int previousSecond(){
-        return this.second = second -1;
-    }
     
 }

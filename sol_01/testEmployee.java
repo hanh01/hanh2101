@@ -9,41 +9,19 @@ package sol_01;
  *
  * @author Admin
  */
-public class Rectangle {
-    private float length;
-    private float width;
-    
-    public Rectangle(){
-        length = 2.0f;
-        width = 1.0f;
+public class testEmployee {
+    public static void main (String [] args){
+        Employee e1 = new Employee();
+        System.out.println(e1.toString());
+        System.out.println(e1.getName());
+        System.out.println("Salary : " + e1.getSalary());
+        System.out.println(e1.getAnnualSalaly());
+        System.out.println(e1.raiseSalary(50));
+        
+       System.out.println("-----------------------------");
+        e1.setSalary(4000000);
+        System.out.println("Salary : " + e1.getSalary());
+        System.out.println(e1.getAnnualSalaly());
+        System.out.println(e1.raiseSalary(20));
     }
-    public Rectangle(float length, float width){
-        this.length = length;
-        this.width = width;
-    }
-    public float getLength(){
-        return length;
-    }
-    public void setLength(float length){
-        this.length = length;
-    }
-    public float getWidth(){
-        return width;
-    }
-    public void setWidth(float width){
-        this.width = width;
-    }
-    public double getArea(){
-        return length * width ;
-    }
-    public double getPerimeter(){
-        return (length + width) * 2 ;
-    }
-
-    @Override
-    public String toString() {
-        return "Rectangle{" + "length=" + length + ", width=" + width + '}';
-    }
-    
-    
 }

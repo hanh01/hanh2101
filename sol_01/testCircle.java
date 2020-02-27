@@ -9,41 +9,23 @@ package sol_01;
  *
  * @author Admin
  */
-public class Rectangle {
-    private float length;
-    private float width;
-    
-    public Rectangle(){
-        length = 2.0f;
-        width = 1.0f;
+public class testCircle {
+    public static void main(String [] args){
+        Circle c1 = new Circle();
+        System.out.println(c1.toString());
+        System.out.println(c1.getArea());
+        System.out.println(c1.getRadius1());
+        
+        c1.setRadius(3.1);
+        c1.setColor("red");
+        System.out.println("color :" + c1.getColor());
+        System.out.println("radius : " + c1.getRadius1());
+        System.out.println(c1.getArea());
+        
+        System.out.println("------------------------");
+        Circle c2 = new Circle(4.1);
+        System.out.println(c2.toString());
+        System.out.println("Color :" + c2.getColor());
+        System.out.println(c2.getArea());
     }
-    public Rectangle(float length, float width){
-        this.length = length;
-        this.width = width;
-    }
-    public float getLength(){
-        return length;
-    }
-    public void setLength(float length){
-        this.length = length;
-    }
-    public float getWidth(){
-        return width;
-    }
-    public void setWidth(float width){
-        this.width = width;
-    }
-    public double getArea(){
-        return length * width ;
-    }
-    public double getPerimeter(){
-        return (length + width) * 2 ;
-    }
-
-    @Override
-    public String toString() {
-        return "Rectangle{" + "length=" + length + ", width=" + width + '}';
-    }
-    
-    
 }
