@@ -20,7 +20,7 @@ public class MovieList {
       }
         System.out.println("List of favorite movies: "+ movie);
 
-         movie.add(2,"crash landing on you");
+         movie.add(2,"Harry Potter");
          System.out.println(movie);
 
          movie.set(3,"ccc");
@@ -29,7 +29,7 @@ public class MovieList {
          movie.remove(3);
         System.out.println(movie);
 
-        System.out.println("Is  \"crash landing on you \" on the list ?:" + movie.contains("crash landing on you") );
+        System.out.println("Is  \"Harry Potter \" on the list ?:" + movie.contains("Harry Potter") );
 
 
 
