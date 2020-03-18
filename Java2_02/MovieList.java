@@ -29,7 +29,7 @@ public class MovieList {
          movie.remove(3);
         System.out.println(movie);
 
-        System.out.println("Is the movie on the list \"crash landing on you \" ?:" + movie.contains("crash landing on you") );
+        System.out.println("Is  \"crash landing on you \" on the list ?:" + movie.contains("crash landing on you") );
 
 
 
