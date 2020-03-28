@@ -1,18 +1,18 @@
 package Java2_06.giftmodel;
 
 public class Gift {
-    private String id;
+    private int id;
     private String name;
     private double price;
     private  int qty;
-    public Gift(){}
-    public Gift(String id, String name, double price, int qty){
+    public Gift(){};
+    public Gift(int id, String name, double price, int qty){
         this.id = id;
         this.name = name;
         this.price = price;
         this.qty = qty;
     }
-    public  String getId(){
+    public int getId(){
         return id;
     }
     public String getName(){
@@ -24,7 +24,7 @@ public class Gift {
     public int getQty(){
         return this.qty;
     }
-    public void setId(String id){
+    public void setId(int id){
         this.id = id;
     }
     public void setName(String name){

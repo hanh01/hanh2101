@@ -4,12 +4,14 @@ import Java2_05.book;
 import Java2_06.giftmodel.Gift;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class GiftController {
     private static Scanner scanner = new Scanner(System.in);
-
-        public void giftInsert(Gift book) {
+    ArrayList<Gift> list = new ArrayList<>();
+        public void giftInsert(Gift gift) {
             try (
                     Connection conn = DriverManager.getConnection(
                             "jdbc:mysql://localhost:3306/giftshop?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC",
@@ -17,45 +19,26 @@ public class GiftController {
 
                     Statement stmt = conn.createStatement();
             ) {
-                System.out.print("Nhap vao id sp : ");
-                String id = scanner.next();
-                System.out.print("Nhap vao ten sp : ");
-                String name = scanner.next();
-                System.out.print("Nhap vao gia ban : ");
-                double price = scanner.nextDouble();
-                System.out.print("Nhap vao so luong sp : ");
-                int qty = scanner.nextInt();
-
-                System.out.print("Danh sach sau khi them :");
-                String Insert = "insert into book values ("  + "'" + id + "'"  + "," + "'" + name + "'" + "," + price + "," + qty + ")";
+                System.out.println("");
+                String Insert = "insert into book values ("  + gift.getId()  + "," + "'" + gift.getName()+ "'" + "," + gift.getPrice() + "," + gift.getQty() + ")";
                 int countInserted = stmt.executeUpdate(Insert);
 
-                System.out.println(" ");
-                String strSelect = "select * from book";
-                ResultSet rset = stmt.executeQuery(strSelect);
-                while (rset.next()) {
-                    System.out.println(rset.getInt("id") + ", "
-                            + rset.getString("name") + ", "
-                            + rset.getDouble("price") + ", "
-                            + rset.getInt("qty")
-                    );
-                }
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
         }
 
 
-        public void giftDelete(Gift book) {
+        public void giftDelete(Gift gift) {
             try (
                     Connection conn = DriverManager.getConnection(
                             "jdbc:mysql://localhost:3306/giftshop?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC",
-                            "root", "");
+                            "root","");
 
                     Statement stmt = conn.createStatement();
             ){
                 System.out.print("Nhap vao id sp : ");
-                String id = scanner.next();
+                int id = scanner.nextInt();
                 System.out.print("Xoa sp :");
                 String Delete = "delete from book where id = " + id;
                 int countDeleted = stmt.executeUpdate(Delete);
@@ -81,7 +64,7 @@ public class GiftController {
             try (
                     Connection conn = DriverManager.getConnection(
                             "jdbc:mysql://localhost:3306/giftshop?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC",
-                            "root", "");
+                            "root","");
 
                         Statement stmt = conn.createStatement();
                 ) {

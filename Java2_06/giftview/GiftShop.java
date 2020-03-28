@@ -1,5 +1,7 @@
 package Java2_06.giftview;
 import com.mysql.jdbc.*;
+
+import java.sql.SQLType;
 import java.util.*;
 import Java2_06.giftcontroller.GiftController;
 import Java2_06.giftmodel.Gift;
@@ -8,9 +10,31 @@ import java.util.Scanner;
 
 public class GiftShop {
     private static Scanner scanner = new Scanner(System.in);
+    GiftController gc = new GiftController();
+    Gift gift1 = new Gift();
+
+    public void Insert(){
+        System.out.println("Them san pham :");
+        System.out.print("Nhap vao id sp : ");
+        int id = scanner.nextInt();
+        System.out.print("Nhap vao ten sp : ");
+        String name = scanner.next();
+        System.out.print("Nhap vao gia ban : ");
+        double price = scanner.nextDouble();
+        System.out.print("Nhap vao so luong sp : ");
+        int qty = scanner.nextInt();
+        Gift gift = new Gift(id,name,price,qty);
+        gc.giftInsert(gift);
+    }
+
+    public void Delete(){
+        System.out.println("Xoa san pham :");
+        gc.giftDelete(gift1);
+    }
 
     public static void main(String[] args) {
-        Gift gift = new Gift();
+        GiftController gc = new GiftController();
+        GiftShop gs = new GiftShop();
 
         int n;
         System.out.println("0 - to shutdown" +
@@ -19,7 +43,6 @@ public class GiftShop {
                 "\n 3 - Xoa san pham" +
                 "\n 4 - Moi lua chon"
         );
-        GiftController gc = new GiftController();
 
         do {
             do {
@@ -35,13 +58,11 @@ public class GiftShop {
                     break;
 
                 case 2:
-                    System.out.println("Them san pham :");
-                    gc.giftInsert(gift);
+                    gs.Insert();
                     break;
 
                 case 3:
-                    System.out.println("Xoa san pham :");
-                    gc.giftDelete(gift);
+                    gs.Delete();
                     break;
 
                 case 4:
