@@ -52,12 +52,7 @@ public class JdbcUsers {
                 Statement stmt = conn.createStatement();
         ){
 
-            System.out.print("Username : ");
-            String username = scanner.next();
-            System.out.print("Password : ");
-            String password = scanner.next();
-
-            String Select = "Select * from users where username = " + "'" + username + " ', " + " password= " + "'" + password + "'" ;
+            String Select = "Select * from users where username = " + "'" + user.getUsername() + " ', " + " password= " + "'" + user.getPassword() + "'";
             ResultSet rset = stmt.executeQuery(Select);
             if(rset.next()){
                 System.out.println("Dang nhap thanh cong");
