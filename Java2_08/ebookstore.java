@@ -6,7 +6,6 @@ public class ebookstore {
     public static Users user;
     private static Scanner scanner = new Scanner(System.in);
     public static void main(String [] args){
-        Users us = new Users();
         JdbcUsers user1 = new JdbcUsers();
         Books books = new Books();
         Customers customers = new Customers();
@@ -33,6 +32,10 @@ public class ebookstore {
                     break;
 
                 case 2:
+                    System.out.print("Username : ");
+                    String username = scanner.next();
+                    System.out.print("Password : ");
+                    String password = scanner.next();
                     System.out.println("Moi ban dang nhap :");
                     user1.Login(user);
                     break;
