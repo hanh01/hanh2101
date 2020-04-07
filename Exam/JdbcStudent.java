@@ -8,8 +8,7 @@ import java.util.Scanner;
 
 public class JdbcStudent {
     private static Scanner scanner = new Scanner(System.in);
-    private static ArrayList<Menu> students= new ArrayList<>();
-    public void addStudent(){
+    public void Insert(Student student){
         try(
                 Connection conn = DriverManager.getConnection(
                         "jdbc:mysql://localhost:3306/school?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC",
@@ -17,42 +16,15 @@ public class JdbcStudent {
 
                 Statement stmt = conn.createStatement();
         ){
-            System.out.println("Nhap vao id sinh vien : ");
-            String id = scanner.next();
-            System.out.println("Nhap vao ten sinh vien : ");
-            String name = scanner.next();
-            System.out.println("Nhap vao dia chi : ");
-            String address = scanner.next();
-            System.out.println("Nhap vao sdt : ");
-            int phone = scanner.nextInt();
-            Student student= new Student(id, name, address, phone);
             String Insert = "insert into student values ("+ "'" + student.getStudentID() + "'"  + "," + "'" + student.getName() + "'" + "," + "'" + student.getAddress() + "'" + "," + student.getPhone() + ")" ;
             System.out.println("The SQL statement is: "+ Insert+ "\n");
             int countInserted = stmt.executeUpdate(Insert);
-            System.out.println(countInserted+" Da them.\n");
+            System.out.println(countInserted+" Da luu vao ho so.\n");
 
 
         }catch (
                 SQLException ex) {
             ex.printStackTrace();
-        }
-    }
-
-    public void saveStudent(){
-        try(
-                Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/school?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC", "root", "");
-                PreparedStatement pstmt = conn.prepareStatement("insert into student values (?, ?, ?, ?)");
-        ) {
-            conn.setAutoCommit(false);  // Disable auto-commit for each SQL statement
-            for (int i=0; i<this.students.size();i++){
-                pstmt.setString(1, students.get(i).getStudentID());
-                pstmt.setString(2, students.get(i).getName());
-                pstmt.setString(3, students.get(i).getAddress());
-                pstmt.setString(4, students.get(i).getPhone());
-                pstmt.addBatch();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 
