@@ -1,7 +1,7 @@
 <?xml version = "1.0" standalone="yes"?>
 <employee>
     <kitchen_staff/>
-    <name >Frank</name>
+    <name language="">Frank</name>
     <new_hire />
-    <position>Chef</position>
+    <position language="">Chef</position>
 </employee>
