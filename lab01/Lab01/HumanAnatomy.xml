@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+      Document    : HumanAnatomy.xml
+      Author      : vincent
+      Description:
+            It gives the result of human anatomy.
+-->
+
+<Humam_Anatomy>
+    <!-- Explanation of each system -->
+    <System>
+        <Name number = "206 bones">
+            Skeleton system
+        </Name>
+        <Function>
+            Forms a protective model to protect the muscles.
+        </Function>
+        <Types>
+            1. &quot;Axial&quot; skeleton 2.&quot;Appendicular&quot; skeleton
+        </Types>
+    </System>
+    <System>
+        <Name>
+            Digestive system
+        </Name>
+        <Function>
+            Breaks down the chemical components of food.
+        </Function>
+        <Parts>
+            1.Mouth 2.Throat 3.Stomach 4.Intestines 5.Rectum 6.Anus
+        </Parts>
+    </System>
+    <System>
+        <Name>
+            Muscular system
+        </Name>
+        <Function>
+            Moves the muscles by tension and contraction.
+        </Function>
+        <Types>
+            1. &quot;Cardiac&quot; 2. &quot;Smooth&quot; muscles 3. &quot;Skeletol&quot; muscles
+        </Types>
+    </System>
+    <System>
+        <Name>
+            Nervous syste
+        </Name>
+        <Function>
+            Gathers information and controlls the overall human system.
+        </Function>
+        <Parts>
+            1.Brain 2.Spinal Cord
+        </Parts>
+    </System>
+</Humam_Anatomy>
