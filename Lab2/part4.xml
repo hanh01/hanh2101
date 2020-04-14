@@ -1,0 +1,24 @@
+<?xml version="1.0"  ?>
+<FPTAptech>
+    <Student Sex="Female">
+        <Name>
+            <FName>Do</FName>
+            <LName>Hanh</LName>
+        </Name>
+        <Age>19</Age>
+    </Student>
+    <Student Sex="Female">
+        <Name>
+            <FName>Pham</FName>
+            <LName>Quynh</LName>
+        </Name>
+        <Age>18</Age>
+    </Student>
+    <Student Sex="Female">
+        <Name>
+            <FName>Tran</FName>
+            <LName>An</LName>
+        </Name>
+        <Age>19</Age>
+    </Student>
+</FPTAptech>
