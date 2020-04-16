@@ -1,0 +1,47 @@
+document{
+    max-width: 720px;
+    padding-left: 0;
+    padding-right: 0;
+}
+title{
+    display: block;
+    color: aqua;
+    font-size: 36pt;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    background-color:coral ;
+}
+philosopher{
+    display: block;
+    font-size: 16pt;
+    color: aqua;
+    text-align: center;
+    background-color:coral ;
+}
+book{
+    display: block;
+    font-size: 28pt;
+    margin-top: 10px;
+    text-align: center;
+    font-style: italic;
+}
+paragraph{
+    display: block;
+    margin-top: 10pt;
+}
+.standout{
+    color: cyan;
+    background-color: coral;
+}
+[class=standout]
+paragraph.first{
+    text-indent: 40px;
+    margin-top: 30px;
+    background-color: yellow;
+}
+paragraph[class=first]{
+    text-indent: 40px;
+    margin-top: 30px;
+    background-color: yellow;
+}

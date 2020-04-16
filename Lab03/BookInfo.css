@@ -1,0 +1,52 @@
+
+*{
+    font-family: Verdana;
+    font-size: 13pt;
+}
+BookDetail{
+    display: block;
+}
+TitleDetail, Price, OrderInfo, Edition{
+    display: block;
+    margin-bottom: 4pt;
+}
+Title{
+    color:rgb(36,27,160);
+    font-weight: bold;
+}
+EditionInfo{
+    font-weight: bold;
+}
+Price{
+    color:rgb(29,87,175);
+}
+NewPrice, OLdprice {
+    color:rgb(180,7,7);
+    margin-left: 5pt;
+    margin-right: 5pt;
+}
+NewPrice{
+    font-weight: bold;
+}
+OrderInfo{
+    font-size: 10pt;
+}
+GetDate{
+    font-weight: bold;
+    font-size: 11pt;
+}
+Hours, Minutes{
+    font-weight: bold;
+    color: green;
+    font-size: 11pt;
+}
+Edition{
+    font-size: 10pt;
+    border-bottom: 1pt dashed gray;
+    padding-bottom: 10pt;
+    margin-bottom: 7pt;
+}
+EditionType{
+    font-size: 10pt;
+    color: rgb(29,87,175);
+}

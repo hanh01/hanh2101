@@ -1,0 +1,9 @@
+Artist{color: blue}
+* {display: block}
+#favorite{
+    background-color: lightblue;
+    color: blue;
+}
+Music{
+    margin-left: 30px;
+}
