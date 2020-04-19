@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet typ="text/xsl" href=CheckBook.xsl" ?>
+<checkbook>
+    <deposit type="direct-deposit">
+        <payor>Bob's Bolts</payor>
+        <amount>987.32</amount>
+        <date>21-6-00</date>
+        <description category="entertainment">Paycheck</description>
+    </deposit>
+    <payment type="check" number="980">
+        <payee>Kimora's Sports Equipment</payee>
+        <amount>132.77</amount>
+        <date>23-6-00</date>
+        <description category="entertainment">kendo equipment</description>
+    </payment>
+    <payment type="atm">
+        <amount>40.00</amount>
+        <date>26-6-00</date>
+        <description category="cash">pocket money</description>
+    </payment>
+    <payment type="debit">
+        <payee>Lone Star Cafe</payee>
+        <amount>36.86</amount>
+        <date>26-6-00</date>
+        <description category="food">lunch with Greg</description>
+    </payment>
+    <payment type="check" number="981">
+        <payee>Wild Oats Market</payee>
+        <amount>47.28</amount>
+        <date>29-6-00</date>
+        <description category="food">groceries</description>
+    </payment>
+    <payment type="debit">
+        <payee>Barnes and Noble</payee>
+        <amount>58.79</amount>
+        <date>30-6-00</date>
+        <description category="work">O'Reilly Books</description>
+    </payment>
+</checkbook>
