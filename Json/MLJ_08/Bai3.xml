@@ -1,0 +1,25 @@
+<menu>
+    <header>Adobe SVG Viewer</header>
+    <item action="Open" id="Open">Open</item>
+    <item action="OpenNew" id="OpenNew">Open New</item>
+    <separator/>
+    <item action="ZoomIn" id="ZoomIn">Zoom In</item>
+    <item action="ZoomOut" id="ZoomOut">Zoom Out</item>
+    <item action="OriginalView" id="OriginalView">Original View</item>
+    <separator/>
+    <item action="Quality" id="Quality">Quality</item>
+    <item action="Pause" id="Pause">Pause</item>
+    <item action="Mute" id="Mute">Mute</item>
+    <separator/>
+    <item action="Find" id="Find">Find</item>
+    <item action="FindAgain" id="FindAgain">FindAgain</item>
+    <item action="Copy" id="Copy">Copy</item>
+    <item action="CopyAgain" id="CopyAgain">CopyAgain</item>
+    <item action="CopySVG" id="CopySVG">CopySVG</item>
+    <item action="ViewSVG" id="ViewSVG">ViewSVG</item>
+    <item action="ViewSource" id="ViewSource">ViewSource</item>
+    <item action="SaveAS" id="SaveAS">SaveAS</item>
+    <separator/>
+    <item action="Help" id="Help">Help</item>
+    <item action="About" id="About">About</item>
+</menu>
